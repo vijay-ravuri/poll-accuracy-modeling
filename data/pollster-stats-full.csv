@@ -1,0 +1,57 @@
+﻿Column Name,Description
+Pollster,Name of the polling organization. This is meant to reflect the organization that contributed the most intellectual property to the methodology and execution of the poll rather than the organization that paid for or sponsored the poll. FiveThirtyEight may group legally distinct organizations together if they routinely collaborate on polling or share a common methodology.
+Pollster Rating ID,A unique numerical identifier for the pollster.
+# of Polls,"Number of polls from the firm in the FiveThirtyEight pollster ratings database, which covers polls conducted in the final three weeks of House, Senate, gubernatorial and presidential general election campaigns since 1998, and the last three weeks of presidential primaries and caucuses since 2000."
+AAPOR / Roper,"A checkmark indicates the polling firm was a signatory to the American Association Public Opinion Research (AAPOR) Transparency Initiative, or a contributor to the Roper Center data archive. This is a proxy for methodological quality."
+Banned by 538,"A ""yes"" indicates the polling firm is not used in FiveThirtyEight's election forecasting models because we are concerned they have faked some polling results."
+,
+Advanced Plus-Minus,"How a pollster's average error has compared to others polling firms surveying the same races, also accounting for the type of election polled, the number of days until the election, the poll's sample size, the competitiveness of the race, and the number of other pollsters surveying the same election. More recent polls are weighted more heavily in the calculation. Negative scores are favorable and indicate above-average quality."
+Predictive Plus-Minus,"A projection of how accurate the poll will be in future elections. It is based on a combination of a pollster's Advanced Plus-Minus score, the number of polls it has in the database (firms with fewer polls are reverted more strongly reverted to the mean), and our proxies for methodological quality."
+538 Grade,"A letter grade from A+ to F which reflects a pollster's Predictive Plus-Minus score. Firms banned by FiveThirtyEight are automatically given a grade of F. Pollsters with fewer than 10 polls receive a provisional grade of either A/B (strong initial perforance), B/C (average initial performance) or C/D (medicore initial performance)."
+Mean-Reverted Bias,"A pollster's historical average statistical bias toward Democratic or Republican candidates, reverted to a mean of zero based on the number of polls in the database. A score of ""R +1.5"", for example, indicates that the pollster has historically overrated the performance of the Republican candidate."
+,
+Races Called Correctly,"The percentage of polls in which the polling firm correctly identified the winner of the race. If the poll indicated a tie for the lead and one of the tied candidates won, the pollster is given credit for half a win."
+Misses Outside MOE,"The percentage of polls in which the final margin between the top two candidates was outside the 95 percent confidence interval as implied by the poll's margin of error. For these purposes, margin of error is calculated as 1.96 divided by the square root of the poll's sample size."
+Simple Average Error,"The firm's average error, calculated as the difference between the polled result and the actual result for the margin separating the top two finishers in the race."
+Simple Expected Error,"An estimate of the expected error for the races the firm surveyed, which accounts for the type of election polled, the number of days until the election, and the poll's sample size."
+Simple Plus-Minus,"The firm's Simple Average Error less its Simple Expected Error. As with other Plus-Minus categories, negative scores are favorable and indicate above-average quality."
+,
+Advanced Plus-Minus,"A more advanced plus-minus score that also accounts for the performance of other polling firms surveying the same races, and which weights recent results more heavily."
+Mean-Reverted Advanced Plus Minus,"The Advanced Plus-Minus score, reverted to a mean of zero. The amount of mean reversion is calculated as 18 / n+18, where n is the number of polls the firm has conducted, but with polls in previous years discounted at a discount rate of .93 based on the number of years that have passed between the poll and 2018."
+Predictive Plus-Minus,"A projection of how accurate the poll will be in future elections. It is calculated by reverting a pollster's Advanced Plus-Minus score to a mean based on our proxies for methodological quality, plus applying various penaltiies for herding. This rating forms the basis for the weights FiveThirtyEight assigns to polls in its election models."
+,
+# of Polls for Bias Analysis,"The number of polls in which the top two finishers were a Democrat and a Republican. This definition excludes polls of all single-party primaries, and all general elections in which an independent candidate finished in the top two."
+Bias,"A pollster's historical average statistical bias toward Democratic or Republican candidates. A score of ""D +1.7"", for example, indicates that the pollster has historically projected a margin 1.7 percentage points more favorable to the Democratic candidate than the actual results of the races it surveyed."
+Mean-Reverted Bias,"A pollster's Bias score reverted to a mean of zero. The amount of mean reversion is calculated as 18 / n+18, where n is the number of polls the firm has conducted, but with polls in previous years discounted at a discount rate of .93 based on the number of years that have passed between the poll and 2018."
+House Effect,"The average amount by which the firm's polls have shown more favorable results for Democratic or Republican candidates as compared to other surveys of the same race. For instance, if a poll showed the Republican ahead by 5 percentage points, and the average of other polls in the same race showed the Republican ahead by 2 percentage points, it would have a House Effect score of R+3. This is not the same thing as the Bias calculation -- House Effect compares a poll to other surveys of the same races rather than against actual results. Cases in which the firm was the only one to survey the race are not included in the calculation."
+,
+Average Distance from Polling Average (ADPA),"How far the firm's average poll differed from the average of other polls in the field at the time it was released. Specifically, the average is calculated based on the most recent poll (among polls in the pollster rating database) from each other firm that polled the race, provided that the poll was not partisan and that the pollster is not banned by FiveThirtyEight. A low ADPA is potential evidence of herding."
+Herding Penalty,"A herding penalty is triggered when a firm's ADPA is lower than the theoretical minimum based on the sampling error in it's polls. For instance, if a pollster's ADPA is 3.5, but you'd expect its polls to deviate by a minimum of 4.5 points from the polling average given sampling error based on its sample sizes, the firm would receive a herding penalty of 1 point. This penalty is added to a firm's Advanced Plus-Minus score before calculating Predictive Plus-Minus."
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
