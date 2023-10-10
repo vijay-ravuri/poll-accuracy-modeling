@@ -58,3 +58,27 @@ def sample_size(num): # for consistency's sake for imputed_600
     
 def imputed_600(df): # returns 1 for columns that were imputed with samplesize = 600
     return df['samplesize'].apply(sample_size) * df['comment'].apply(imputed_checker)
+
+
+
+def method_flagger(series):
+    flags = {
+            'Text' : [],
+            'Live Phone' : [],
+            'Mail' : [],
+            'Face-to-Face' : [],
+            'IVR' : [],
+            'Online' : []
+        }
+    
+    for text in series:
+        methods = text.split('/')
+
+        
+
+        for option in flags.keys():
+            if option in methods:
+                flags[option].append(1)
+            else:
+                flags[option].append(0)
+    return flags
