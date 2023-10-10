@@ -60,8 +60,10 @@ def imputed_600(df): # returns 1 for columns that were imputed with samplesize =
     return df['samplesize'].apply(sample_size) * df['comment'].apply(imputed_checker)
 
 
-
+# This function turns the methodology column into a set of one-hot encoded variables
+# The method takes in the column and returns a dataframe of encoded methods
 def method_flagger(series):
+    # Creating a dict to store flags
     flags = {
             'Text' : [],
             'Live Phone' : [],
@@ -71,14 +73,13 @@ def method_flagger(series):
             'Online' : []
         }
     
+    # Take each row in the series
     for text in series:
-        methods = text.split('/')
+        methods = text.split('/') # Methods are separated by '/'
 
-        
-
-        for option in flags.keys():
+        for option in flags.keys(): # Flag if the option is present
             if option in methods:
                 flags[option].append(1)
             else:
                 flags[option].append(0)
-    return flags
+    return flags 
