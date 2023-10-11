@@ -1,3 +1,5 @@
+# Defines a number of functions that we used to extract features during EDA
+
 import re
 # Spacy is a robust NLP library that provides pre-trained models.
 from spacy import load as load_spacy 
@@ -61,7 +63,7 @@ def imputed_600(df): # returns 1 for columns that were imputed with samplesize =
 
 
 # This function turns the methodology column into a set of one-hot encoded variables
-# The method takes in the column and returns a dataframe of encoded methods
+# The method takes in the column and returns a dict of encoded methods
 def method_flagger(series):
     # Creating a dict to store flags
     flags = {
