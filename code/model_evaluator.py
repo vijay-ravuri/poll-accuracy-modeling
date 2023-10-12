@@ -2,9 +2,8 @@
 # Originally adapted (minorly) from lesson 2.14, taken directly from Vijay's Project 3
 
 
-from sklearn.base import accuracy_score
 from sklearn.metrics import ConfusionMatrixDisplay, f1_score, \
-    recall_score, precision_score
+    recall_score, precision_score, accuracy_score
 
 
 def evaluation(X_test, y_test, model):
