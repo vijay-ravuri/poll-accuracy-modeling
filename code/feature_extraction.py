@@ -58,7 +58,7 @@ def sample_size(num): # for consistency's sake for imputed_600
     else:
         return 0
     
-def imputed_600(df): # returns 1 for columns that were imputed with samplesize = 600
+def imputed_600(df): # returns 1 for rows that were imputed with samplesize = 600
     return df['samplesize'].apply(sample_size) * df['comment'].apply(imputed_checker)
 
 
