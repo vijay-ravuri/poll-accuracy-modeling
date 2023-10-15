@@ -5,6 +5,8 @@ import re
 from spacy import load as load_spacy 
 import numpy as np
 
+# Spacy's pre-trained englishmodels are shown here along with performance metrics
+# https://spacy.io/models/en
 nlp = load_spacy('en_core_web_trf') # We chose this model for its higher NER performance
 
 def person_flag(list): # Used internally for person_finder
