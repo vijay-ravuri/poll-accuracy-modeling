@@ -1,5 +1,5 @@
-# Fuction used to plot a Confusion Matrix and calculate performance metrics for models
-# Originally adapted (minorly) from lesson 2.14, taken directly from Vijay's Project 3
+# Function used to plot a Confusion Matrix and calculate performance metrics for models
+# Originally adapted (slightly) from lesson 2.14, taken directly from Vijay's Project 3
 
 
 from sklearn.metrics import ConfusionMatrixDisplay, f1_score, \

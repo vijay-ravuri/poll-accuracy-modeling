@@ -1,11 +1,11 @@
 # Defines a number of functions that we used to extract features during EDA
 
 import re
-# Spacy is a robust NLP library that provides pre-trained models.
+# spaCy is a robust NLP library that provides pre-trained models.
 from spacy import load as load_spacy 
 import numpy as np
 
-# Spacy's pre-trained englishmodels are shown here along with performance metrics
+# spaCy's pre-trained english models are shown here along with performance metrics
 # https://spacy.io/models/en
 nlp = load_spacy('en_core_web_trf') # We chose this model for its higher NER performance
 
