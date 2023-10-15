@@ -1,5 +1,3 @@
-# [DATA DICTIONARY](https://github.com/fivethirtyeight/data/tree/master/pollster-ratings)
-
 # Analyzing US Election Polling Data
 ## Description
 #### Background 
@@ -8,6 +6,23 @@
 #### Goals & Process
 We took the [raw historical polling data](/data/raw-polls.csv) along with 538's updated [pollster rankings](/data/pollster-ratings.csv) and analyzed trends across pollsters, time, race type, and other aggregate measures. We then attempted to model whether a poll was correct or not based on measures of the poll and historical trends for the pollster administering it. Additionally, we applied clustering algorithms to find trends and similar clumps of polls with the goal of clustering the inaccurate polls. 
 
+#### Data Dictionaries
+The data dictionary for the raw-polls.csv can be found on [538's GitHub](https://github.com/fivethirtyeight/data/tree/master/pollster-ratings) while the data dictionary for pollster-ratings.csv can be found [here](/data/pollster-ratings-dict.csv). The pollster ratings data dictionary was extracted from an excel file hosted in the repo that our data came from. All features extracted are explained in the [relevant notebook](/code/01-Cleaning_and_Feature_Extraction.ipynb).
+
+## Project Outline
+1. [Cleaning and Feature Extraction](/code/01-Cleaning_and_Feature_Extraction.ipynb)
+2. [Exploratory Data Analysis](/code/02-EDA.ipynb)
+3. [Predictive Modeling](/code/03-Predictive_Modeling.ipynb)
+4. [Clustering](/code/04-Clustering.ipynb)
+
+## Software Requirements
+All analysis was done using Python 3.11 with up to date libraries as of 10/06/2023. The following packages were used:
+- Pandas
+- Numpy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- SpaCy
 ## Data Processing
 538's data is well-maintained and had few errors or oversights. There were some missing values that needed to be addressed, in particular the bias was not calculated for a number of polls, despite their being an error calculated for each poll. We calculated bias manually and used that value for our analysis. A number of polls had comments listed which added context to the poll such as whether it was of registered voters only or if an organization had sponsored them. We used the [spaCy](https://spacy.io/) library which provides pre-trained language processing models to extract relevant features from the comments. For a full look at our cleaning and feature extraction, see [Cleaning and Feature Extraction Notebook](/code/01-Cleaning_and_Feature_Extraction.ipynb).
 
