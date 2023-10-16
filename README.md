@@ -1,4 +1,4 @@
-# Analyzing US Election Polling Data
+# Classification and Clustering Methods to Predict Pollster Accuracy in US Elections
 [Presentation slides](presentation.pdf)
 ## Description
 #### Background 
