@@ -1,4 +1,5 @@
 # Analyzing US Election Polling Data
+[Presentation slides](presentation.pdf)
 ## Description
 #### Background 
 [FiveThirtyEight (538)](https://fivethirtyeight.com/about-us/) is a website that has historically investigated and reported on polls, economics, and sports through a statistical and data analytical lense. Their [election forecast](https://projects.fivethirtyeight.com/2022-election-forecast/) uses aggregates of polls and ratings about individual polling organizations (pollsters) to predict who will win elections and analyze trends on a national level. They provide [pollster ratings](https://projects.fivethirtyeight.com/pollster-ratings/) based on a pollster's historic performance along with their polling methodology. Their [data](https://github.com/fivethirtyeight/data/tree/master/pollster-ratings) is publicly available on GitHub. As of October 13<sup>th</sup>, 2023, 538's website has been archived and their articles have been moved to the [538 section of ABC's website](https://abcnews.go.com/538).
